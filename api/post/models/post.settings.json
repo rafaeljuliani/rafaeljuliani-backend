@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "name": "post"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "titulo": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "conteudo": {
+      "type": "richtext"
+    },
+    "url": {
+      "type": "string"
+    },
+    "resumo": {
+      "type": "richtext"
+    }
+  }
+}
